@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Introduction to Web Accessibility</title>
+		<title>Accessibility Crash Course for Web Developers</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<!-- Theme options: black, white, league, beige, sky, night, serif, simple, solarized-->
@@ -18,29 +18,35 @@
 
 		<!-- Printing and PDF exports -->
 		<script>
-			var link = document.createElement( 'link' );
+			var link = document.createElement('link');
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName('head')[0].appendChild(link);
 		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1 class="title"><div>Accessibility Crash Course</div><div> for Web Developers</div></h1>
+					<h1 class="title">Accessibility Crash Course<br> for Web Developers</h1>
 					<p><strong>Dan Lewis</strong><br>Clemson University</p>
 				</section>
 				<section>
 					<h2>Goals</h2>
 					<ul>
+
+						<li>Understand the basics of web accessibility evaluation</li>
+						<li>Learn how to correct common accessibility issues</li>
+						<li>Recognize the importance of human evaluation beyond automated tools</li>
+
 						<li>What web accessibility means</li>
 						<li>Why we should make the web accessible</li>
 						<li>How people can use assistive technology</li>
 						<li>Approaches to testing accessibility</li>
 						<li>Understanding of screen readers</li>
 						<li>Tools for evaluating web accessibility</li>
+						<li>Identify common accessibility issues</li>
 					</ul>
 				</section>
 				<section>
@@ -74,76 +80,6 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Why? Appeal to Authority</h2>
-					<img src="./res/doj.png" alt="Letterhead from U.S. Department of Justice, Civil Rights Division, regarding Americans with Disabilities Act Investigation">
-				</section>
-				<section>
-					<h2>ADA: Americans with Disabilities Act</h2>
-					<ul>
-						<li>Prohibits discrimination and ensures equal opportunity for persons with disabilities</li>
-						<li>Requires reasonable accommodations be provided in meeting the needs of individuals with disabilities</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Rehabilitation Act<br>Section 504</h2>
-					<ul>
-						<li>Federal law to protect individuals with disabilities in programs that receive federal financial assistance</li>
-						<li>This includes any college or university that receives federal financial assistance</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Rehabilitation Act<br>Section 508</h2>
-					<ul>
-						<li>1998 Amendment to the Rehabilitation Act</li>
-						<li>Requires federal agencies to make their information technology accessible to people with disabilities</li>
-					</ul>
-				</section>
-				<section>
-					<h2>International Law</h2>
-					<p>Many countries have laws for accessibility</p>
-					<ul>
-						<li>Australia</li>
-						<li>France</li>
-						<li>Germany</li>
-						<li>Ireland</li>
-						<li>New Zealand</li>
-						<li>...the list goes on</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Why? Business</h2>
-					<ul>
-						<li>Reduced risk</li>
-						<li>Wider audience</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Why? Human Rights</h2>
-					<blockquote>"To enable persons with disabilities to live independently and participate fully in all aspects of life"</blockquote>
-					<blockquote>"To ensure that persons with disabilities can exercise the right to freedom of expression and opinion"</blockquote>
-					<p class="small"><a href="http://www.un.org/disabilities/convention/conventionfull.shtml" target="_blank">UN Convention on the Rights of Persons with Disabilities</a></p>
-				</section>
-				<section>
-					<h2>Why? The Future You</h2>
-					<blockquote>"We're all just temporarily abled."</blockquote>
-					<p class="small">
-						Cindy Li
-						<br>
-						<a href="http://blog.invisionapp.com/accessibility-design-for-the-future/" target="_blank">Design for the Future</a>
-					</p>
-				</section>
-				<section>
-					<h2>Why? The Present You</h2>
-					<ul>
-						<li>Disabilities can be temporary or situational: concussion, broken limb, or carrying grocery bags</li>
-						<li>Many accessibility features benefit those without disabilities: captions, voice dictation, zoom</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Why? Appeal to Emotion</h2>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/UrvaSqN76h4" frameborder="0" allowfullscreen></iframe>
-				</section>
-				<section>
 					<h2>Why Accessibility?</h2>
 					<ul>
 						<li>Law</li>
@@ -153,10 +89,10 @@
 						<li>The Present You</li>
 						<li>Empathy</li>
 					</ul>
-					<p>As developers, we have a certain type of brain...</p>
 				</section>
 				<section>
 					<h2>Nerd Sniping</h2>
+					<p>As developers, we have a certain type of brain...</p>
 					<img src="res/nerd_sniping.png" alt="Comic strip" longdesc="nerdsnipe">
 					<div id="nerdsnipe" class="visually-hidden">
 						<p>A person wearing a hat is sitting in a chair and begins speaking to a bystander.</p>
@@ -181,7 +117,7 @@
 				</section>
 				<section>
 					<h2>Reading Comments on Instagram</h2>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/0i1k3srHKAA" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/0i1k3srHKAA" frameborder="0" allowfullscreen title="Reading Commens on Instragram video on YouTube"></iframe>
 				</section>
 				<section>
 					<h2>Nerd Sniping Photoshop</h2>
@@ -189,7 +125,7 @@
 				</section>
 				<section>
 					<h2>Sip and Puff Switch</h2>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/Bhj5vs9P5cw?t=52s" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Bhj5vs9P5cw?t=52s" frameborder="0" allowfullscreen title="Sip and Puff Switch video on YouTube"></iframe>
 				</section>
 				<section>
 					<h2>Nerd Sniping the Web</h2>
@@ -328,37 +264,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Summary</h2>
-					<ul>
-						<li>What web accessibility means</li>
-						<li>Why we should make the web accessible</li>
-						<li>How people can use assistive technology</li>
-						<li>Approaches to testing accessibility</li>
-						<li>Understanding of screen readers</li>
-						<li>Tools for evaluating web accessibility</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Next...</h2>
-					<ul>
-						<li>Deeper dive into code</li>
-						<li>Correct common accessibility issues</li>
-						<li>Prepare by:
-							<ul>
-								<li>Brushing up on your HTML and CSS</li>
-								<li>Trying out some screen readers</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-				<section>
-					<h1>Intro to Web Accessibility</h1>
-					<h2>Part 2</h2>
-					<p><strong>Dan Lewis</strong><br>Clemson University</p>
-				</section>
-				<section>
-					<h2>Goal</h2>
-					<p>Identify common accessibility issues</p>
+					<h2>Accessibility Techniques</h2>
 					<ul>
 						<li>Focus</li>
 						<li>Semantics</li>
@@ -556,7 +462,7 @@ el.focus();
 				</section>
 				<section>
 					<h3>Captions</h3>
-					<iframe width="420" height="315" src="https://www.youtube.com/embed/RCBfdUhrk80" frameborder="0" allowfullscreen></iframe>
+					<iframe width="420" height="315" src="https://www.youtube.com/embed/RCBfdUhrk80" frameborder="0" allowfullscreen title="Squirrel video with poor captions on YouTube"></iframe>
 					<p>Synchronized, Equivalent, Accessible</p>
 				</section>
 				<section>
@@ -737,22 +643,8 @@ user-scalable=no
 					</ul>
 				</section>
 				<section>
-					<h3>Roving Focus</h3>
-					<p>
-					  Navigating a widget changes its focus. Returning to a widget should return to its previous focus.
-					</p>
-					<ul>
-					  <li>Add key handlers to manage focus programmatically</li>
-					  <li>Set tabindex=0 for newly focused element</li>
-					  <li>Set tabindex=-1 for previously focused element</li>
-					</ul>
-					<p>
-					<a href="http://www.oaa-accessibility.org/examplep/treeview1/" target="_blank">Tree View Example</a>
-					</p>
-				</section>
-				<section>
 				  <h3>Form Errors</h3>
-				  <iframe src="form-errors.html" class="example-frame" width="700" height="500" frameborder="2"></iframe>
+				  <iframe src="form-errors.html" class="example-frame" width="700" height="500" frameborder="2" title="Form error demo"></iframe>
 				</section>
 				<section>
 					<h3>Visually Hidden Content</h3>
@@ -775,7 +667,7 @@ user-scalable=no
 				</section>
 				<section>
 					<h3>Live Regions</h3>
-					<iframe src="aria-live.html" class="example-frame" width="700" height="500" frameborder="2"></iframe>
+					<iframe src="aria-live.html" class="example-frame" width="700" height="500" frameborder="2" title="ARIA Live demo"></iframe>
 				</section>
 				<section>
 					<h3>Single Page Apps</h3>
