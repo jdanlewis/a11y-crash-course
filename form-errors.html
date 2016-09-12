@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Accessible Form Errors Example</title>
+      <style>
+	body {
+	  background: white;
+	  margin: .5em;
+	  color: #333;
+	}
+	body, input {
+	  font-size: 24pt;
+	}
+	#error {
+	  border: 2px solid #a20000;
+	  padding: .25em .5em 0 .5em;
+	}
+	.required {
+	  color: #a20000;
+	}
+	form {
+	  margin: .5em 0;
+	}
+	label {
+	  display: block;
+	}
+	input {
+	  border: 2px solid #333;
+	  margin-bottom: .25em;
+	}
+	input[type="submit"] {
+	  background: #f0f0f0;
+	  margin-top: .5em;
+	}
+	input[aria-invalid="true"] {
+	  border: 3px solid #a20000;
+	}
+	.hidden {
+	  display: none;
+	}
+      </style>
+  </head>
+  <body>
+    <div class="example-form">
+      <div id="error-container" class="hidden">
+	<div id="error-message" class="examle-form-message" tabindex="-1"></div>
+	<ol id="error-list"></ol>
+      </div>
+      <form action="">
+	<div class="row">
+	  <label for="example-form-first-name">First name <span class="required">(required)</span></label>
+	  <input id="example-form-first-name">
+	</div>
+	<div class="row">
+	  <label for="example-form-last-name">Last name <span class="required">(required)</span></label>
+	  <input id="example-form-last-name">
+	</div>
+	<div>
+	  <input id="submit" type="submit" value="Submit">
+	</div>
+      </form>
+    </div>
+    <script>
+    window.addEventListener('load', function() {
+
+      function validate(e) {
+	e.preventDefault();
+	var errorContainer = document.getElementById('error-container');
+	var errorMessage = document.getElementById('error-message');
+	var errorList = document.getElementById('error-list');
+	var numErrors = 0;
+	var required = [
+	  { id: 'example-form-first-name', msg: 'Please enter your first name' },
+	  { id: 'example-form-last-name', msg: 'Please enter your last name' }
+	];
+	// Clear previous errors.
+	while (errorList.children.length) {
+	  errorList.removeChild(errorList.firstChild)
+	}
+	// Validate each input.
+	required.forEach(function(required) {
+	  var el = document.getElementById(required.id);
+	  var li, a;
+	  if (el.value === "") {
+	    numErrors++;
+	    // Set invalid state on input.
+	    el.setAttribute('aria-invalid', 'true');
+	    // Create error list item.
+	    li = document.createElement('li');
+	    a = document.createElement('a');
+	    a.setAttribute('href', '#' + required.id);
+	    a.textContent = required.msg;
+	    li.appendChild(a);
+	    errorList.appendChild(li);
+	  } else {
+	    el.removeAttribute('aria-invalid');
+	  }
+	})
+	// Handle errors, or success.
+	if (numErrors) {
+	  errorContainer.classList.remove('hidden');
+	  if (numErrors > 1) {
+	    errorMessage.textContent = 'The following ' + numErrors + ' errors were found in the submitted information:';
+	  } else {
+	    errorMessage.textContent = 'The following error was found in the submitted information:';
+	  }
+	  errorMessage.focus();
+	} else {
+	  errorContainer.classList.add('hidden');
+	  alert('Success!');
+	}
+      }
+
+      var btn = document.getElementById('submit');
+      btn.addEventListener('click', validate);
+
+    });
+    </script>
+</body>

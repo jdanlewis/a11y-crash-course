@@ -1,0 +1,85 @@
+.reveal .title {
+  font-size: 135%;
+}
+
+.visually-hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.reveal a {
+  text-decoration: underline;
+}
+
+.reveal .small {
+  font-size: 67%;
+}
+
+.reveal .hljs {
+  white-space: pre;
+  word-wrap: break-word;
+  background: #171717;
+  font-size: 150%;
+}
+
+.reveal .hljs.center {
+  text-align: center;
+}
+
+.reveal .decorative-images {
+  display: flex;
+  background: white;
+  border: 3px solid #333;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal .decorative-images > img {
+  border: 0;
+  box-shadow: none;
+  padding: 5px;
+  height: 40px;
+}
+
+.reveal .decorative-images span {
+  display: inline-block;
+  padding: 5px;
+}
+
+.reveal .wordmark {
+  background: #522D80;
+  padding: 1em;
+  height: 100px;
+}
+
+.reveal .example-table {
+  width: 400px;
+}
+
+.reveal .example-button,
+.reveal .example-button:visited,
+.reveal .example-button:hover,
+.reveal .example-button:focus {
+  border: 2px solid #333;
+  cursor: default;
+  text-decoration: none;
+  color: #333;
+  font-size: 100%;
+  background: #eee;
+  border-radius: 15px;
+  margin: .5em;
+  display: inline-block;
+  padding: 5px;
+  line-height: 2em;
+  font-family: inherit;
+  padding: .5em;
+  margin: .25em;
+}
+
+.reveal .example-frame {
+  border: 3px solid #333;
+}

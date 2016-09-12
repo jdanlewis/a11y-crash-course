@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Accessible Form Errors Example</title>
+    <style>
+      body {
+	background: white;
+	margin: .5em;
+	color: #333;
+      }
+      body, button {
+	font-size: 24pt;
+      }
+      button {
+	border: 2px solid #333;
+	margin-bottom: .25em;
+	background: #f0f0f0;
+	margin-top: .5em;
+      }
+      #status {
+	text-align: center;
+	font-weight: bold;
+	font-size: 72pt;
+	margin: .5em;
+      }
+      #buttons {
+	text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="status" aria-live="polite">0</div>
+    <div id="buttons">
+	<button id="increment">Increment Count</button><br>
+        <button id="start">Start Counting</button>
+	<button id="stop">Stop Counting</button><br>
+        <button id="assertive">Be Assertive</button>
+        <button id="polite">Be Polite</button>
+    </div>
+    <script>
+    window.addEventListener('load', function() {
+        var count = 0,
+            interval,
+            status = document.getElementById('status'),
+            incBtn = document.getElementById('increment'),
+            startBtn = document.getElementById('start'),
+            stopBtn = document.getElementById('stop'),
+            assertBtn = document.getElementById('assertive'),
+            politeBtn = document.getElementById('polite');
+        function update() {
+            count++;
+            status.innerHTML = count;
+        }
+        function start() {
+            if (!interval) {
+                interval = setInterval(update, 1000);
+            }
+        }
+        function stop() {
+            clearInterval(interval);
+            interval = null;
+        }
+	function assertive() {
+	  status.setAttribute('aria-live', 'assertive');
+	}
+	function polite() {
+	  status.setAttribute('aria-live', 'polite');
+	}
+	startBtn.addEventListener('click', start);
+	stopBtn.addEventListener('click', stop);
+	incBtn.addEventListener('click', update);
+	assertBtn.addEventListener('click', assertive);
+	politeBtn.addEventListener('click', polite);
+    });
+    </script>
+</body>
