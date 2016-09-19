@@ -32,23 +32,24 @@
 					<h1 class="title">Accessibility Crash Course<br> for Web Developers</h1>
 					<p><strong>Dan Lewis</strong><br>Clemson University</p>
 				</section>
+
+				<!--
 				<section>
 					<h2>Goals</h2>
 					<ul>
-
 						<li>Understand the basics of web accessibility evaluation</li>
 						<li>Learn how to correct common accessibility issues</li>
 						<li>Recognize the importance of human evaluation beyond automated tools</li>
 
-						<li>What web accessibility means</li>
-						<li>Why we should make the web accessible</li>
-						<li>How people can use assistive technology</li>
-						<li>Approaches to testing accessibility</li>
-						<li>Understanding of screen readers</li>
-						<li>Tools for evaluating web accessibility</li>
-						<li>Identify common accessibility issues</li>
+						<li>Define web accessibility</li>
+						<li>Motivation</li>
+						<li>Testing</li>
+						<li>Common accessibility issues</li>
+
 					</ul>
 				</section>
+				-->
+
 				<section>
 					<h2>What is Web Accessibility?</h2>
 					<blockquote>
@@ -59,7 +60,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>What is Web Accessibility? (continued)</h2>
+					<h3>What is Web Accessibility? (continued)</h3>
 					<blockquote>
 						"More specifically, Web accessibility means that people with disabilities can perceive,
 						understand, navigate, and interact with the Web, and that they can contribute to the Web."
@@ -68,31 +69,24 @@
 						<a href="https://www.w3.org/WAI/intro/accessibility.php" target="_blank">W3C Web Accessibility Initiative (WAI)</a>
 					</p>
 				</section>
-				<section>
-					<h2>Not just blind people</h2>
-					<ul>
-						<li>Visual</li>
-						<li>Cognitive</li>
-						<li>Auditory</li>
-						<li>Physical</li>
-						<li>Speech</li>
-						<li>Neurological</li>
-					</ul>
-				</section>
+
+
 				<section>
 					<h2>Why Accessibility?</h2>
 					<ul>
+						<li>Empathy</li>
 						<li>Law</li>
-						<li>Business</li>
 						<li>Human Rights</li>
+						<li>Business</li>
 						<li>The Future You</li>
 						<li>The Present You</li>
-						<li>Empathy</li>
 					</ul>
 				</section>
 				<section>
-					<h2>Nerd Sniping</h2>
+					<h3>Nerd Sniping</h3>
+					<!--
 					<p>As developers, we have a certain type of brain...</p>
+					-->
 					<img src="res/nerd_sniping.png" alt="Comic strip" longdesc="nerdsnipe">
 					<div id="nerdsnipe" class="visually-hidden">
 						<p>A person wearing a hat is sitting in a chair and begins speaking to a bystander.</p>
@@ -112,171 +106,46 @@
 					</p>
 				</section>
 				<section>
-					<h2>Nerd Sniping Instagram</h2>
+					<h3>Nerd Sniping Instagram</h3>
 					<img src="res/nerd_snipe_instagram.png" alt="A sign that reads: How can a blind person use Instagram?">
 				</section>
+				<!--
 				<section>
-					<h2>Reading Comments on Instagram</h2>
+					<h3>Reading Comments on Instagram</h3>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/0i1k3srHKAA" frameborder="0" allowfullscreen title="Reading Commens on Instragram video on YouTube"></iframe>
 				</section>
+				-->
 				<section>
-					<h2>Nerd Sniping Photoshop</h2>
+					<h3>Nerd Sniping Photoshop</h3>
 					<img src="res/nerd_snipe_photoshop.png" alt="A sign that reads: How could someone use Photoshop without using their hands or voice?">
 				</section>
+				<!--
 				<section>
-					<h2>Sip and Puff Switch</h2>
+					<h3>Sip and Puff Switch</h3>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/Bhj5vs9P5cw?t=52s" frameborder="0" allowfullscreen title="Sip and Puff Switch video on YouTube"></iframe>
 				</section>
+				-->
 				<section>
-					<h2>Nerd Sniping the Web</h2>
+					<h3>Nerd Sniping the Web</h3>
 					<img src="res/nerd_snipe_web.png" alt="A sign that reads: On this infinite web of information, how can we enable people with disabilities to perceive, understand, navigate, and contribute content?">
 				</section>
-				<section>
-					<h2>Testing for Accessibility</h2>
-					<ul>
-						<li>Automated Testing</li>
-						<li>Manual Testing</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Automated Testing: Pros</h2>
-					<ul>
-						<li>Quick: can scan a lot of code at once</li>
-						<li>Provides a good baseline</li>
-						<li>May catch errors that were otherwise overlooked</li>
-						<li>Can report some errors with certainty (i.e. missing alternative text)</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Automated Testing: Cons</h2>
-					<ul>
-						<li>False positives; false negatives</li>
-						<li>Many errors require human analysis</li>
-						<li>Not as thorough as manual testing</li>
-						<li>Alternative text: accurate? decorative?</li>
-						<li>Difficulty determining color contrast</li>
-						<li>Difficulty with complex widgets &amp; rich content</li>
-						<li>Nuances between screen readers and browsers</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Manual Testing</h2>
-					<ul>
-						<li>Manual testing can be tedious</li>
-						<li>Requires strong understanding of accessibility best practices</li>
-						<li>There's no substitute for a human</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Screen Readers</h2>
-					<ul>
-						<li>JAWS</li>
-						<li>NVDA</li>
-						<li>VoiceOver</li>
-						<li>Window-Eyes</li>
-						<li>ZoomText</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Screen Reader / Browser Combos</h2>
-					<ul>
-						<li>JAWS with IE</li>
-						<li>NVDA with Firefox</li>
-						<li>VoiceOver with Safari</li>
-						<li>Window-Eyes with IE</li>
-						<li>ZoomText with IE</li>
-					</ul>
-					<p>
-						<a href="http://webaim.org/projects/screenreadersurvey6/" target="_blank">WebAIM Screen Reader Survey</a>
-					</p>
-				</section>
-				<section>
-					<h2>Clemson's Home Page</h2>
-					<a href="http://www.clemson.edu" target="_blank">
-					<img src="res/clemson.png" alt="A screenshot of the Clemson University homepage">
-					</a>
-				</section>
-				<section>
-					<h2>Tools: Tenon.io</h2>
-					<ul>
-						<li>Automatically scans websites for accessibility errors</li>
-						<li>Provides an API to integrate accessibility testing into existing toolchain</li>
-						<li>Web interface to manage projects and settings</li>
-					</ul>
-					<p>
-						<a href="http://tenon.io" target="_blank">Tenon.io</a>
-					</p>
-				</section>
-				<section>
-					<h2>Tools: WAVE Toolbar</h2>
-					<ul>
-						<li>Identifies common errors and warnings</li>
-						<li>Summarizes accessibility features</li>
-						<li>Provides structural information, ability to toggle CSS, and contrast checks</li>
-					</ul>
-					<p>
-						<a href="http://wave.webaim.org/extension/" target="_blank">WAVE Chrome Extension</a>
-					</p>
-				</section>
-				<section>
-					<h2>Tools: Google Accessibility Developer Tools</h2>
-					<ul>
-						<li>Adds accessibility properties to elements tab</li>
-						<li>Adds accessibility audit to dev tools</li>
-						<li>Can audit dynamically generated content</li>
-						<li>Provides links to detailed error descriptions</li>
-					</ul>
-					<p>
-						<a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en" target="_blank">Google Accessibility Developer Tools</a>
-					</p>
-				</section>
-				<section>
-					<h2>Tools: High Contrast Mode</h2>
-					<ul>
-						<li>Shows websites in high contrast mode</li>
-						<li>Affects users with low vision</li>
-						<li>Colorblind people may benefit</li>
-						<li>Helpful for people sensitive to light</li>
-					</ul>
-					<p>
-						<a href="https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph/reviews" target="_blank">Google High Contrast Extension</a>
-					</p>
-				</section>
-				<section>
-					<h2>Tools: Color Contrast Checkers</h2>
-					<ul>
-						<li>Ensures color contrast is sufficient for low vision users</li>
-					</ul>
-					<p>
-						<a href="http://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Color Contrast Checker</a>
-						<br>
-						<a href="https://www.paciellogroup.com/resources/contrastanalyser/" target="_blank">Colour Contrast Analyser</a>
-					</p>
-				</section>
-				<section>
-					<h2>Tools: Chrome Lens</h2>
-					<ul>
-						<li>Simulates visual deficiencies</li>
-						<li>Track path of a screen reader user</li>
-					</ul>
-					<p>
-						<a href="http://chromelens.xyz/" target="_blank">Chrome Lens</a>
-					</p>
-				</section>
+
+
 				<section>
 					<h2>Accessibility Techniques</h2>
 					<ul>
-						<li>Focus</li>
-						<li>Semantics</li>
-						<li>Design</li>
-						<li>Bonus</li>
+						<li>Managing Focus</li>
+						<li>Proper Semantics</li>
+						<li>Thoughtful Design</li>
 					</ul>
 				</section>
+
+
 				<section>
 					<h2>Focus</h2>
 					<ul>
-						<li>Keyboard navigation</li>
 						<li>Visual focus</li>
+						<li>Keyboard navigation</li>
 					</ul>
 				</section>
 				<section>
@@ -346,27 +215,48 @@ el.focus();
 						<li>Often visually hidden until focused</li>
 						<li>Browser quirks</li>
 					</ul>
+					<pre><code class="hljs">
+&lt;a href="#main"&gt;Skip navigation&lt;/a&gt;
+&lt;nav&gt;
+...
+...
+...
+&lt;/nav&gt;
+&lt;main id="main" tabindex="-1"&gt;
+					</code></pre>
 				</section>
 				<section>
-					<h2>Focus: Putting it all together</h2>
+					<h3>Focus: Putting it all together</h3>
 					<ul>
 						<li>Works with just the keyboard</li>
 						<li>Has logical focus order</li>
 						<li>Does not abuse tabindex</li>
 						<li>Uses element.focus() appropriately</li>
 						<li>Visibly shows current focus</li>
-						<li>Provides skip link (with browser quirks)</li>
+						<li>Provides skip link</li>
 					</ul>
 					<p>
 						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" target="_blank">MDN tabindex documentation</a>
 					</p>
 				</section>
+
+
 				<section>
 					<h2>Semantics</h2>
 					<blockquote>
 						"What is this thing and what does it do?"
 					</blockquote>
 					<p class="small"><a href="http://www.karlgroves.com/presentations/" target="_blank">Karl Groves</a></p>
+				</section>
+				<section>
+					<h3>WAI-ARIA</h3>
+					<ul>
+					  <li>The Web Accessibility Initiative Accessible Rich Internet Applications specification</li>
+					  <li>Roles (menu, checkbox)</li>
+					  <li>State and Properties (aria-checked, aria-label, aria-hidden)</li>
+					  <li>Live regions, drag &amp; drop</li>
+					</ul>
+					<p><em>Don't use ARIA if a native control is sufficient!</em></p>
 				</section>
 				<section>
 					<h3>Language</h3>
@@ -384,8 +274,8 @@ el.focus();
 					<h3>Headings</h3>
 					<ul>
 						<li>Use them!</li>
-						<li>Hierarchy</li>
 						<li>Not for font size</li>
+						<li>Create hierarchy</li>
 					</ul>
 					<pre><code class="hljs center">
 &lt;h1&gt;Level One&lt;/h1&gt;
@@ -418,7 +308,7 @@ el.focus();
 					</code></pre>
 				</section>
 				<section>
-					<h3>Generic Link Text</h3>
+					<h3>Avoid Generic Link Text</h3>
 					<pre><code class="hljs center">
 &lt;a href="http://example.com"&gt;click here&lt;/a&gt;
 					</code></pre>
@@ -429,7 +319,7 @@ el.focus();
 					</p>
 				</section>
 				<section>
-					<h3>Underlined Links</h3>
+					<h3>Underline Links</h3>
 					<p>
 					Visit <a href="http://example.com" target="_blank" style="text-decoration:none">an example website</a>.
 					<br>vs.</br>
@@ -468,8 +358,8 @@ el.focus();
 				<section>
 					<h3>Tables</h3>
 					<ul>
-						<li>Used for data</li>
 						<li>Not used for layout</li>
+						<li>Used for data</li>
 						<li>Include table caption and headers</li>
 					</ul>
 					<p class="small">
@@ -535,6 +425,8 @@ el.focus();
 &lt;footer role="contentinfo"&gt;
 					</code></pre>
 				</section>
+
+
 				<section>
 					<h2>Design</h2>
 					<ul>
@@ -583,8 +475,16 @@ el.focus();
 					<p>Flashes faster than 3 times per second can cause seizures for people with photosensitivity.</p>
 				</section>
 				<section>
+					<h3>Responsive Design</h3>
+					<ul>
+					  <li>Grid system</li>
+					  <li>Media queries</li>
+					  <li>Flexible images</li>
+					</ul>
+					<p>Read the <a href="http://alistapart.com/article/responsive-web-design" target="_blank">seminal paper</a> on A List Apart.</p>
+				</section>
+				<section>
 					<h3>Zoom</h3>
-
 					<pre><code class="hljs">
 &lt;meta name="viewport" 
  content="width=device-width, initial-scale=1"&gt;
@@ -597,57 +497,174 @@ maximum-scale=1
 user-scalable=no
 					</code></pre>
 				</section>
+
+
 				<section>
-					<h3>Responsive Design</h3>
+					<h2>Testing for Accessibility</h2>
 					<ul>
-					  <li>Grid system</li>
-					  <li>Media queries</li>
-					  <li>Flexible images</li>
+						<li>Automated Testing</li>
+						<li>Manual Testing</li>
 					</ul>
-					<p>Read the <a href="http://alistapart.com/article/responsive-web-design" target="_blank">seminal paper</a> on A List Apart.</p>
 				</section>
 				<section>
-					<h3>Touch Targets</h3>
+					<h3>Automated Testing: Pros</h3>
 					<ul>
-					  <li>At least 9mm x 9mm</li>
-					  <li>Include 1mm to 2mm spacing around target</li>
+						<li>Quick: can scan a lot of code at once</li>
+						<li>Provides a good baseline</li>
+						<li>May catch errors that were otherwise overlooked</li>
+						<li>Can report some errors with certainty (i.e. missing alternative text)</li>
 					</ul>
-					<p>Google's <a href="https://material.google.com/layout/metrics-keylines.html#metrics-keylines-touch-target-size" target="_blank">material design guidelines</a> provide a good example of accessible touch targets.</p>
 				</section>
+				<section>
+					<h3>Automated Testing: Cons</h3>
+					<ul>
+						<li>False positives; false negatives</li>
+						<li>Many errors require human analysis</li>
+						<li>Not as thorough as manual testing</li>
+						<li>Alternative text: accurate? decorative?</li>
+						<li>Difficulty determining color contrast</li>
+						<li>Difficulty with complex widgets &amp; rich content</li>
+						<li>Nuances between screen readers and browsers</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h3>WAVE Toolbar</h3>
+					<ul>
+						<li>Identifies common errors and warnings</li>
+						<li>Summarizes accessibility features</li>
+						<li>Provides structural information, ability to toggle CSS, and contrast checks</li>
+					</ul>
+					<p>
+						<a href="http://wave.webaim.org/extension/" target="_blank">WAVE Chrome Extension</a>
+					</p>
+				</section>
+				<section>
+					<h3>Tenon.io</h3>
+					<ul>
+						<li>Automatically scans websites for accessibility errors</li>
+						<li>Provides an API to integrate accessibility testing into existing toolchain</li>
+						<li>Web interface to manage projects and settings</li>
+					</ul>
+					<p>
+						<a href="http://tenon.io" target="_blank">Tenon.io</a>
+					</p>
+				</section>
+				<section>
+					<h3>Google Accessibility Developer Tools</h3>
+					<ul>
+						<li>Adds accessibility properties to elements tab</li>
+						<li>Adds accessibility audit to dev tools</li>
+						<li>Can audit dynamically generated content</li>
+						<li>Provides links to detailed error descriptions</li>
+					</ul>
+					<p>
+						<a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en" target="_blank">Google Accessibility Developer Tools</a>
+					</p>
+				</section>
+				<section>
+					<h3>High Contrast Mode</h3>
+					<ul>
+						<li>Shows websites in high contrast mode</li>
+						<li>Affects users with low vision</li>
+						<li>Colorblind people may benefit</li>
+						<li>Helpful for people sensitive to light</li>
+					</ul>
+					<p>
+						<a href="https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph/reviews" target="_blank">Google High Contrast Extension</a>
+					</p>
+				</section>
+				<section>
+					<h3>Color Contrast Checkers</h3>
+					<ul>
+						<li>Ensures color contrast is sufficient for low vision users</li>
+					</ul>
+					<p>
+						<a href="http://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Color Contrast Checker</a>
+						<br>
+						<a href="https://www.paciellogroup.com/resources/contrastanalyser/" target="_blank">Colour Contrast Analyser</a>
+					</p>
+				</section>
+				<section>
+					<h3>Chrome Lens</h3>
+					<ul>
+						<li>Simulates visual deficiencies</li>
+						<li>Track path of a screen reader user</li>
+					</ul>
+					<p>
+						<a href="http://chromelens.xyz/" target="_blank">Chrome Lens</a>
+					</p>
+				</section>
+
+
+				<section>
+					<h3>Manual Testing</h3>
+					<ul>
+						<li>Manual testing can be tedious</li>
+						<li>Requires strong understanding of accessibility best practices</li>
+						<li>There's no substitute for a human</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Screen Readers</h3>
+					<ul>
+						<li>JAWS</li>
+						<li>NVDA</li>
+						<li>VoiceOver</li>
+						<li>Window-Eyes</li>
+						<li>ZoomText</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Screen Reader / Browser Combos</h3>
+					<ul>
+						<li>JAWS with IE</li>
+						<li>NVDA with Firefox</li>
+						<li>VoiceOver with Safari</li>
+						<li>Window-Eyes with IE</li>
+						<li>ZoomText with IE</li>
+					</ul>
+					<p>
+						<a href="http://webaim.org/projects/screenreadersurvey6/" target="_blank">WebAIM Screen Reader Survey</a>
+					</p>
+				</section>
+
+
+				<!--
+				<section>
+					<h3>Clemson's Home Page</h3>
+					<a href="http://www.clemson.edu" target="_blank">
+					<img src="res/clemson.png" alt="A screenshot of the Clemson University homepage">
+					</a>
+				</section>
+				-->
+
+
 				<section>
 					<h2>Bonus</h2>
-				</section>
-				<section>
-					<h3>WAI-ARIA</h3>
-					<ul>
-					  <li>The Web Accessibility Initiative Accessible Rich Internet Applications specification</li>
-					  <li>Roles (menu, checkbox)</li>
-					  <li>State and Properties (aria-checked, aria-label, aria-hidden)</li>
-					  <li>Live regions, drag &amp; drop</li>
-					</ul>
-					<p><em>Don't use ARIA if a native control is sufficient!</em></p>
 				</section>
 				<section>
 					<h3>Widgets</h3>
 					<ul>
 					  <li>Modal dialogs, date pickers, combo boxes, etc.</li>
-					  <li>Trapping focus</li>
+					  <li>Keyboard interaction</li>
+					  <li>ARIA attributes</li>
+					  <li>Examples</li>
 					</ul>
 					<p><a href="https://www.w3.org/TR/wai-aria-practices-1.1" target="_blank">WAI-ARIA Authoring Practices</a></p>
-				</section>
-				<section>
-					<h3>Keyboard Traps</h3>
-					<ul>
-					  <li>Don't trap the keyboard</li>
-					  <li>...unless it should be trapped (e.g. modal dialog)</li>
-					</ul>
 				</section>
 				<section>
 				  <h3>Form Errors</h3>
 				  <iframe src="form-errors.html" class="example-frame" width="700" height="500" frameborder="2" title="Form error demo"></iframe>
 				</section>
 				<section>
-					<h3>Visually Hidden Content</h3>
+					<h3>Hidden Content</h3>
+					<p>Hidden from screen readers:</p>
+					<pre><code class="hljs">
+&lt;div aria-hidden="true"&gt;...&lt;/div&gt;
+					</code></pre>
+					<p>Hidden visually:</p>
 					<pre><code class="hljs">
 .visually-hidden {
   position: absolute;
@@ -660,6 +677,14 @@ user-scalable=no
 					</code></pre>
 				</section>
 				<section>
+					<h3>Single Page Apps</h3>
+					<ul>
+					  <li>Focus should be evident at all times, especially after dynamic updates</li>
+					  <li>When navigating, update title and set focus to main container or h1</li>
+					  <li>Use aria-live to express UI changes</li>
+					</ul>
+				</section>
+				<section>
 					<h3>aria-live</h3>
 					<pre><code class="hljs center">
 &lt;div aria-live="polite"&gt;&lt;/div&gt;
@@ -669,17 +694,11 @@ user-scalable=no
 					<h3>Live Regions</h3>
 					<iframe src="aria-live.html" class="example-frame" width="700" height="500" frameborder="2" title="ARIA Live demo"></iframe>
 				</section>
-				<section>
-					<h3>Single Page Apps</h3>
-					<ul>
-					  <li>Focus should be evident at all times, especially after dynamic updates</li>
-					  <li>When navigating, update title and set focus to main container or h1</li>
-					  <li>Use aria-live to express UI changes</li>
-					</ul>
-				</section>
+
 				<section>
 					<h2>Questions?</h2>
 				</section>
+
 			</div>
 		</div>
 
