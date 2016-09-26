@@ -1,6 +1,6 @@
 # Accessibility Crash Course for Web Developers
 
-This repository contains a presentation for crash course in web accessibility for web developers.
+This repository contains a presentation for a crash course in web accessibility for web developers.
 
 ## Setup
 
