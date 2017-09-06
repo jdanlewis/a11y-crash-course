@@ -1,6 +1,6 @@
 # Accessibility Crash Course for Web Developers
 
-This repository contains a presentation for a crash course in web accessibility for web developers. Slides are also available in [PDF format](https://github.com/jdanlewis/a11y-crash-course/raw/master/a11y-crash-course.pdf).
+This repository contains a presentation for a crash course in web accessibility for web developers.
 
 ## Setup
 
